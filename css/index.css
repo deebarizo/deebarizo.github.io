@@ -224,12 +224,23 @@ div.container section.middle-content div ul li:last-child {
 }
 div.container section.middle-content h3,
 div.container section.bottom-content h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   padding-bottom: 1rem;
   font-weight: 700;
 }
 div.container section.bottom-content {
   flex-direction: column;
+}
+div.container section.bottom-content p.project-title {
+  font-weight: 700;
+}
+div.container section.bottom-content ul {
+  list-style-position: inside;
+  list-style-type: square;
+}
+div.container section.bottom-content li {
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 div.container section.bottom-content div.work-history,
 div.container section.bottom-content div.work-history table {
