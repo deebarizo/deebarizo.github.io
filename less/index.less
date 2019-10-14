@@ -1,0 +1,299 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+@top-content-background-color: #ddd;
+@footer-background-color: #333;
+@font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+  "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
+  "Verdana Ref", sans-serif;
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: @font-stack;
+}
+
+.section-divider {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.paragraph-font-size {
+  font-size: 1.5rem;
+}
+
+div.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  p {
+    .paragraph-font-size();
+    line-height: 1.5;
+  }
+
+  header nav {
+    .section-divider();
+    justify-content: flex-end;
+
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
+      padding: 0 2rem;
+      .paragraph-font-size();
+    }
+  }
+
+  section.top-content {
+    background-color: @top-content-background-color;
+    padding: 2.5rem;
+
+    h1 {
+      font-size: 5rem;
+      padding: 1.5rem 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      padding: 0.2rem 0;
+    }
+
+    p {
+      padding: 1rem 0;
+    }
+
+    button {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  section.middle-content,
+  section.bottom-content {
+    .section-divider();
+    justify-content: space-between;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+
+  section.middle-content div {
+    width: 48%;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+
+    p {
+      padding-bottom: 2.25rem;
+    }
+
+    ul {
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    ul li {
+      .paragraph-font-size();
+      border-bottom: 1px solid #aaa;
+      padding: 1rem;
+    }
+
+    ul li:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  section.middle-content h3,
+  section.bottom-content h3 {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  section.bottom-content {
+    flex-direction: column;
+
+    div.work-history,
+    div.work-history table {
+      width: 100%;
+    }
+
+    table tr {
+      .paragraph-font-size();
+      border-top: 1px solid #aaa;
+    }
+
+    table tr:last-child {
+      border-bottom: 1px solid #aaa;
+    }
+
+    table th,
+    table td {
+      padding: 1rem 2rem 1rem 1rem;
+    }
+
+    table th {
+      text-align: left;
+      font-weight: 700;
+    }
+
+    @media (max-width: 500px) {
+      table th:nth-child(3),
+      table td:nth-child(3) {
+        display: none;
+      }
+    }
+
+    div.contact {
+      padding-top: 2rem;
+    }
+  }
+
+  footer div.copyright {
+    background-color: @footer-background-color;
+    color: white;
+    text-align: center;
+    .paragraph-font-size();
+    padding: 1.5rem;
+  }
+}

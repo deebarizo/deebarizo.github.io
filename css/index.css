@@ -1,0 +1,268 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+.section-divider {
+  display: flex;
+  padding: 2rem 0;
+}
+.paragraph-font-size {
+  font-size: 1.5rem;
+}
+div.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+div.container p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+div.container header nav {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  div.container header nav {
+    justify-content: center;
+  }
+}
+div.container header nav a {
+  display: flex;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+div.container section.top-content {
+  background-color: #ddd;
+  padding: 2.5rem;
+}
+div.container section.top-content h1 {
+  font-size: 5rem;
+  padding: 1.5rem 0;
+}
+div.container section.top-content h2 {
+  font-size: 2rem;
+  padding: 0.2rem 0;
+}
+div.container section.top-content p {
+  padding: 1rem 0;
+}
+div.container section.top-content button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+div.container section.middle-content,
+div.container section.bottom-content {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  div.container section.middle-content,
+  div.container section.bottom-content {
+    flex-direction: column;
+  }
+}
+div.container section.middle-content div {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  div.container section.middle-content div {
+    width: 100%;
+  }
+}
+div.container section.middle-content div p {
+  padding-bottom: 2.25rem;
+}
+div.container section.middle-content div ul {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+div.container section.middle-content div ul li {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #aaa;
+  padding: 1rem;
+}
+div.container section.middle-content div ul li:last-child {
+  border-bottom: 0;
+}
+div.container section.middle-content h3,
+div.container section.bottom-content h3 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+div.container section.bottom-content {
+  flex-direction: column;
+}
+div.container section.bottom-content div.work-history,
+div.container section.bottom-content div.work-history table {
+  width: 100%;
+}
+div.container section.bottom-content table tr {
+  font-size: 1.5rem;
+  border-top: 1px solid #aaa;
+}
+div.container section.bottom-content table tr:last-child {
+  border-bottom: 1px solid #aaa;
+}
+div.container section.bottom-content table th,
+div.container section.bottom-content table td {
+  padding: 1rem 2rem 1rem 1rem;
+}
+div.container section.bottom-content table th {
+  text-align: left;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  div.container section.bottom-content table th:nth-child(3),
+  div.container section.bottom-content table td:nth-child(3) {
+    display: none;
+  }
+}
+div.container section.bottom-content div.contact {
+  padding-top: 2rem;
+}
+div.container footer div.copyright {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
